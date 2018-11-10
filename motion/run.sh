@@ -36,6 +36,9 @@ if [ ! -f "$CONFIG" ]; then
 	sed -i "s|%%PICTURENAME%%|$PICTURENAME|g" /etc/motion.conf
 	sed -i "s|%%WEBCONTROLLOCAL%%|$WEBCONTROLLOCAL|g" /etc/motion.conf
 	sed -i "s|%%WEBCONTROLHTML%%|$WEBCONTROLHTML|g" /etc/motion.conf
+	sed -i "s|%%MQTTHOST%%|$WEBCONTROLHTML|g" /etc/motion.conf
+	sed -i "s|%%MQTTUSER%%|$WEBCONTROLHTML|g" /etc/motion.conf
+	sed -i "s|%%MQTTPASSWORD%%|$WEBCONTROLHTML|g" /etc/motion.conf
 	CONFIG=/etc/motion.conf
 fi
 # start server
