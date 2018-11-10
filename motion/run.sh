@@ -18,6 +18,10 @@ PICTURENAME=$(jq --raw-output ".picture_name" $CONFIG_PATH)
 WEBCONTROLLOCAL=$(jq --raw-output ".webcontrol_local" $CONFIG_PATH)
 WEBCONTROLHTML=$(jq --raw-output ".webcontrol_html" $CONFIG_PATH)
 
+MQTTHOST=$(jq --raw-output ".MQTT_Host" $CONFIG_PATH)
+MQTTUSER=$(jq --raw-output ".MQTT_User" $CONFIG_PATH)
+MQTTPASSWORD=$(jq --raw-output ".MQTT_Password" $CONFIG_PATH)
+
 
 echo "[Info] Show connected usb devices"
 ls -al /dev/video*
